@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}MakersBNB{% endblock %}
+
+{% block styles %}
+{% endblock %}
+
+{% block content %}
+
+<div class="booking-rejection-container">
+    <div class="booking-message">
+        <h4 class="error-message">{{ error_message }}</h4>
+
+        <a href="/property_list" class="back-to-prop-from-denied-request">Back to all property listings</a>
+    </div>
+
+</div>
+
+
+
+{% endblock %}

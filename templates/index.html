@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block title %}MakersBNB{% endblock %}
+
+{% block styles %}
+{% endblock %}
+
+
+
+{% block content %}
+    <div class="menu background">
+        <div class="welcome">
+            <h3>Welcome to VenBNB, the fastest growing property hire app in the world!</h3>
+            <br>
+            <br>
+            <div class="welcome-text"><p>
+                    Your fgnljkasd onjsndfn
+                    Jasndkla gfjnsd dfjgnsd, sdjfnsf. Adfgsdfk, sdflknmsdf asf gksdnf dfgknsnweiopv dfgjowndfopvnw vopijqwn sdfk.
+                    <br><br>Confused? The text above it’s perfect, you need a break, book with us!</p>
+            </div>
+        </div>
+        <div class="review-menu">
+            <div class="review-text">
+                <h5>At VenBnB, your holidays are important, but our profit is paramount.</h5>
+                <br><h5>Don't take our word, take theirs:</h5></div>
+            <div class="reviews">
+                <img class="review" src="/static/img/image (1).png" alt="1">
+                <img class="review" src="/static/img/image (4).png" alt="1">
+                <img class="review" src="/static/img/image (3).png" alt="1">
+            </div>
+        </div>
+        
+    
+    </div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=landscape+house")
+        .then(response => response.json())
+        .then(data => {
+            var fullImageUrl = data.urls.full;
+            document.querySelector('.index-image').src = fullImageUrl;
+        })
+        .catch(error => {
+            console.error('Error fetching image:', error);
+        });
+</script>
+{% endblock %}

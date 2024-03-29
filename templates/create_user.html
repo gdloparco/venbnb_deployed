@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}MakersBNB{% endblock %}
+
+{% block styles %}
+{% endblock %}
+
+{% block content %}
+    <form action="/create_user" method="POST">
+        <div class="create-user-container">
+            <div class="welcome"> <h3>Register</h3> </div>
+            {% if errors %}
+                <p class="errors">
+                    There were errors with your submission: {{errors}}
+                </p>
+            {% endif %}
+            <input placeholder="Username" class="input" type="text" name="username">
+            <br>
+            <input placeholder="E-mail" class="input" type="text" name="email">
+            {% if errors %}
+                <p class="password-errors">
+                    {{password_errors}}
+                </p>
+            {% endif %}
+            <br>
+            <input id="myInput" placeholder="Password" class="input" type="password" name="password">
+            <br>
+            <div class="checkbox"><input type="checkbox" onclick="myFunction()"><div class="show-password">Show Password</div></div>
+            <br>
+            <input placeholder="Phone number" class="input" type="text" name="phone">
+            <br>
+            <input class="submit" type="submit" value="Register">
+        </div>
+        
+    </form>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myInput");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+            }
+    </script>
+    
+{% endblock %}
