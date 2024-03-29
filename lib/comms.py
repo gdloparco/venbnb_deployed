@@ -1,4 +1,4 @@
-# file mailgun.py
+# file comms.py
 # This file stores information regarding the mailgun emailing 
 # functions for MakersBnB
 import requests
@@ -6,9 +6,9 @@ import os
 
 
 # MakersBnB Mailgun API key and domain
-mailgun_api_key = os.environ.get('MAILGUN_API_KEY')
+MAILGUN_API_KEY = os.environ.get('MAILGUN_API_KEY')
 
-mailgun_domain = os.environ.get('MAILGUN_DOMAIN')
+MAILGUN_DOMAIN = os.environ.get('MAILGUN_DOMAIN')
 
 
 class EmailManager():
@@ -21,9 +21,9 @@ class EmailManager():
             f"https://api.mailgun.net/v3/{MAILGUN_DOMAIN}/messages",
             auth=("api", MAILGUN_API_KEY),
             data={"from": "MakersBnB <series4000kryten@gmail.com>",
-                  "to": to,
-                  "subject": subject,
-                  "text": text})
+                    "to": to,
+                    "subject": subject,
+                    "text": text})
 
 # if __name__ == "__main__":
 #     to = "series4000kryten@gmail.com"
