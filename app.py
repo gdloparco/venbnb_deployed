@@ -292,4 +292,4 @@ def get_user_details(username):
 # They also start the server configured to use the test database
 # if started in test mode.
 if __name__ == '__main__':
-    app.run(debug=True, port=int(os.environ.get('PORT', 5000)))
+    app.run(debug=False, port=int(os.environ.get('PORT', 5000)))
