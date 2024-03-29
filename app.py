@@ -37,13 +37,6 @@ def get_index():
         return render_template('index.html', username = username)
     return render_template('index.html')
 
-@app.route('/', methods=['GET'])
-def get_index():
-    if 'username' in session:
-        username = session['username']
-        return render_template('index.html', username = username)
-    return render_template('index.html')
-
 # GET PROPERTY ROUTES
 @app.route('/property_list', methods=['GET'])
 def get_property_list():
