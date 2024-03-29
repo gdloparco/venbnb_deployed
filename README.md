@@ -1,6 +1,6 @@
 # VenBnB Python Project
 
-This MakersBnB project in Python was brought to you by:
+This project was built collaboratively by the Venera Team, group of the Makers Jan2024 cohort, comprising:
 
 gdloparco
 
@@ -11,4 +11,3 @@ ohmygois
 PatSternberg
 
 ttyhktup
-
